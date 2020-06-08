@@ -1,0 +1,17 @@
+body {
+  /* background: radial-gradient(#302b63, #24243e); */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.description{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
