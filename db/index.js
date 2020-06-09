@@ -24,7 +24,7 @@ db.connect( (err) => {
   }
 })
 
-const getAll = function(callback) {
+const getAll = (callback) => {
   db.query('SELECT code, city, country FROM code ORDER BY city', (err, results) => {
     if(err) {
       callback(err, null);
@@ -34,28 +34,27 @@ const getAll = function(callback) {
   });
 };
 
+const save = (data, callback) => {
+  db.query(`INSERT into searchHistory (code, city, country, date, link) VALUES ('${data.code}', '${data.city}', '${data.country}', '${data.date}', '${data.link}')`, (err, results) => {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
+const readHistory = (callback) => {
+  db.query('SELECT * FROM searchHistory ORDER BY id DESC LIMIT 10', (err, results) => {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
 module.exports = db;
-
+module.exports.save = save;
 module.exports.getAll = getAll;
-
-// import React, { Component } from 'react';
-// import Calendar from 'react-calendar';
-
-// class MyApp extends Component {
-//   state = {
-//     date: new Date(),
-//   }
-
-//   onChange = date => this.setState({ date })
-
-//   render() {
-//     return (
-//       <div>
-//         <Calendar
-//           onChange={this.onChange}
-//           value={this.state.date}
-//         />
-//       </div>
-//     );
-//   }
-// }
+module.exports.readHistory = readHistory;
