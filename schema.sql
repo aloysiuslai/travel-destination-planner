@@ -26,6 +26,6 @@ CREATE TABLE searchHistory (
  *    mysql -u root < server/schema.sql
  *  to create the database and the tables.*/
 
---  copy code (code, city, country) FROM '/users/aloysiuslai/hrsf127-mvp-starter/airports.csv' DELIMITER ',' CSV HEADER;
+--  copy code (code, city, country) FROM '/users/aloysiuslai/travel-destination-planner/airports.csv' DELIMITER ',' CSV HEADER;
 
 -- INSERT into searchHistory (code, city, country, date, link) VALUES ('BCN', 'Barcelona', 'Spain', '2020-06-12', 'https://www.tripadvisor.com/CheapFlightsSearchResults-a_airport0.SFO-a_airport1.BCN-a_cos.0-a_date0.20200612-a_nearby0.no-a_nearby1.no-a_nonstop.no-a_pax0.a-a_travelers.1');

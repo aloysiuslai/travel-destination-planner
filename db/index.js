@@ -1,13 +1,3 @@
-// var selectAll = function(callback) {
-//   connection.query('SELECT * FROM items', function(err, results, fields) {
-//     if(err) {
-//       callback(err, null);
-//     } else {
-//       callback(null, results);
-//     }
-//   });
-// };
-
 const {Client} = require('pg');
 
 const db = new Client({

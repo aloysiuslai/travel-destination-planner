@@ -15,7 +15,6 @@ const ThirdPage = ({state, returnHome, saveHistory}) => {
       <button onClick={returnHome}>Return</button>
       <br/>
       <button onClick={saveHistory}>Save</button>
-
     </div>
   )
 }

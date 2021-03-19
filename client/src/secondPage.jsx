@@ -11,9 +11,7 @@ const SecondPage = ({handleChange, handleSubmit, state, changeDate, getHistory})
           <select value={state.value} onChange={handleChange} required>
             <option></option>
             {state.cities.map(city => {
-              return(
-                <option value={[city.code, city.city, city.country]} key={city.city}>{city.city}</option>
-              )
+              return <option value={[city.code, city.city, city.country]} key={city.city}>{city.city}</option>
             })}
           </select>
         </label>

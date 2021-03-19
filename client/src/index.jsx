@@ -156,22 +156,15 @@ class App extends React.Component {
 
   render () {
     if ( this.state.page === 0) {
-      return (
-        <SecondPage handleSubmit={this.handleSubmit} handleChange={this.handleChange} state={this.state} changeDate={this.changeDate} getHistory={this.getHistory}/>
-      )
+      return <SecondPage handleSubmit={this.handleSubmit} handleChange={this.handleChange} state={this.state} changeDate={this.changeDate} getHistory={this.getHistory}/>
     }
 
     if (this.state.page === 1) {
-      return (
-        <ThirdPage state={this.state} returnHome={this.returnHome} saveHistory={this.saveHistory}/>
-      )
-
+      return <ThirdPage state={this.state} returnHome={this.returnHome} saveHistory={this.saveHistory}/>
     }
 
     if ( this.state.page === 2) {
-      return (
-        <SearchHistory state={this.state} returnHome={this.returnHome}/>
-      )
+      return <SearchHistory state={this.state} returnHome={this.returnHome}/>
     }
   }
 }

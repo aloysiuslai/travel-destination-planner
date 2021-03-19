@@ -43,10 +43,3 @@ app.listen(3000, function() {
 });
 
 module.exports = app;
-// {
-//   "code": "BCN",
-//   "city": "Barcelona",
-//   "country": "Spain",
-//   "date":"2020-06-12",
-//   "link":"https://www.tripadvisor.com/CheapFlightsSearchResults-a_airport0.SFO-a_airport1.BCN-a_cos.0-a_date0.20200612-a_nearby0.no-a_nearby1.no-a_nonstop.no-a_pax0.a-a_travelers.1"
-// }
